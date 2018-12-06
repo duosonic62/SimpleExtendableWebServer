@@ -100,7 +100,7 @@ public class HTTPResponse {
         // レスポンスヘッダの生成
         String responseHead = ("HTTP/1.1 " + statusCode + " " + statusDescription + "\n" +
                 "Content-Type:text/html" + "\n" +"\n");
-        System.out.println(responseHead);
+        System.out.println("return" + responseHead);
 
         // 出力を書き込んで行く
         dataOutputStream.write(responseHead.getBytes());
