@@ -13,7 +13,7 @@ import java.net.Socket;
  * @author rikusekiguchi 2018/07/07
  */
 public class WebServer {
-
+    // ポート番号をheroku用に動的変換する
     private static final int PORT = Integer.parseInt(System.getenv("PORT"));
 
     /**
