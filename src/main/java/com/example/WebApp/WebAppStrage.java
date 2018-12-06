@@ -1,6 +1,6 @@
 package com.example.WebApp;
 
-import com.example.WebApp.bulletinBoardApp.BulletinBoardApp;
+//import com.example.WebApp.bulletinBoardApp.BulletinBoardApp;
 import com.example.WebApp.staticServerApp.StaticWebApp;
 
 import java.io.File;
@@ -27,7 +27,7 @@ public class WebAppStrage {
      */
     public static void initApp() {
         StaticWebApp staticWebApp           = new StaticWebApp();
-        BulletinBoardApp bulletinBoardApp   = new BulletinBoardApp();
+        //BulletinBoardApp bulletinBoardApp   = new BulletinBoardApp();
 
         // 静的なファイル(resources内)の読込
         File staticDir      = new File("src/main/resources");
@@ -36,7 +36,7 @@ public class WebAppStrage {
                 .forEach(file -> webAppMap.put("/"+file.getName(), staticWebApp));
 
         // 掲示板アプリの読込
-        webAppMap.put("/BulletinBoard", bulletinBoardApp);
+        //webAppMap.put("/BulletinBoard", bulletinBoardApp);
 
     }
 
