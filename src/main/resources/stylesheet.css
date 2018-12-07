@@ -1,0 +1,35 @@
+header {
+      background-color: #556473;
+      color: #fff;
+      height: 90px;
+}
+
+header p{
+    float: left;
+    font-size: 30px;
+    padding: 10px 20px;
+}
+
+.content {
+    height: 800px;
+    padding: 150px 20px;
+    background-image: url(bgimg.jpg) ;
+    background-size: cover;
+}
+
+.content h1 {
+    font-size: 150px;
+}
+
+.btn {
+    display: inline-block;
+      padding: 10px 50px;
+      opacity: 0.8;
+      border-radius: 2px;
+      background-color: #6bb7cc;
+      font-size: 30px;
+}
+
+.btn:hover {
+    opacity: 1;
+}

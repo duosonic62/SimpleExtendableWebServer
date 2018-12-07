@@ -76,8 +76,18 @@ public class HTTPResponse {
 
 
         // レスポンスヘッダの生成
-        String responseHead = ("HTTP/1.1 " + statusCode + " " + statusDescription + "\n" +
-                "Content-Type: " + fileDataSource.getContentType() + "\n" +"\n");
+        // getContentTypeがcssの時のみ聞かないため、ファイル名をみてcssの時だけハードコード
+        String responseHead;
+        System.out.println("require file name... " + responseFile.getName());
+        if( !responseFile.getName().endsWith(".css") ) {
+            responseHead = ("HTTP/1.1 " + statusCode + " " + statusDescription + "\n" +
+                    "Content-Type: " + fileDataSource.getContentType() + "\n" + "\n");
+            System.out.println("return" + responseHead);
+        }else{
+            responseHead = ("HTTP/1.1 " + statusCode + " " + statusDescription + "\n" +
+                    "Content-Type: " + "text/css" + "\n" + "\n");
+            System.out.println("return" + responseHead);
+        }
 
         // 書き込み
         dataOutputStream.write(responseHead.getBytes());

@@ -90,9 +90,6 @@ public class HTTPRequest {
      * リクエストを解析するメソッド
      */
     private void prepare() {
-        System.out.println("!!!!!");
-        requestLines.stream().forEach(System.out::println);
-
         // メソッド
         String[] splits = requestLines.get(0).split(" ");
         requestMethod = splits[0];
